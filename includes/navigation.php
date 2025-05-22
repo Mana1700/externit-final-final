@@ -127,10 +127,10 @@ if ($isLoggedIn) {
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin'): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="admin/manage_companies.php">Manage Companies</a>
+                            <a class="nav-link" href="/Externit-final/admin/manage_companies.php">Manage Companies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="admin/manage_contacts.php">Contact Messages</a>
+                            <a class="nav-link" href="/Externit-final/admin/manage_contacts.php">Contact Messages</a>
                         </li>
                     <?php endif; ?>
                 <?php else: ?>

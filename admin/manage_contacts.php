@@ -60,7 +60,7 @@ $submissions = $stmt->fetchAll();
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Contact Form Submissions</h2>
-            <a href="manage_companies.php" class="btn btn-secondary">
+            <a href="/Externit-final/admin/manage_companies.php" class="btn btn-secondary">
                 <i class="fas fa-arrow-left"></i> Back to Companies
             </a>
         </div>
