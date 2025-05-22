@@ -133,6 +133,29 @@ if (!$profile) {
                                                 <input type="number" class="form-control" id="graduation_year" name="graduation_year" value="<?php echo htmlspecialchars($profile['graduation_year']); ?>" required>
                                             </div>
                                         </div>
+
+                                        <div class="mb-4">
+                                            <h4 class="section-title student-text mb-3">Payment Information</h4>
+                                            <div class="mb-3">
+                                                <label for="iban" class="form-label">IBAN Number</label>
+                                                <input type="text" class="form-control" id="iban" name="iban" value="<?php echo htmlspecialchars($profile['iban'] ?? ''); ?>" placeholder="e.g., MY12 3456 7890 1234 5678 9012">
+                                                <div class="form-text">
+                                                    <i class="bi bi-info-circle me-1"></i>
+                                                    Your IBAN (International Bank Account Number) is required to receive payments for your work. You can find your IBAN:
+                                                    <ul class="mt-2">
+                                                        <li>On your bank statement</li>
+                                                        <li>In your online banking portal</li>
+                                                        <li>By contacting your bank directly</li>
+                                                    </ul>
+                                                    The IBAN format varies by country but typically includes:
+                                                    <ul class="mt-2">
+                                                        <li>2-letter country code (e.g., MY for Malaysia)</li>
+                                                        <li>2 check digits</li>
+                                                        <li>Your bank account number</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     <?php else: ?>
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Company Name</label>

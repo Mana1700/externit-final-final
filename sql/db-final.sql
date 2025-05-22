@@ -201,6 +201,7 @@ CREATE TABLE `students` (
   `major` varchar(255) NOT NULL,
   `graduation_year` year(4) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
+  `iban` varchar(34) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `bio` text DEFAULT NULL COMMENT 'Student biography or personal statement'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -209,14 +210,14 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `user_id`, `name`, `university`, `major`, `graduation_year`, `phone`, `created_at`, `bio`) VALUES
-(1, 1, 'abdelrahman mohamed', 'UNIMAS', 'CY', '2028', '01112233475', '2025-04-24 04:26:23', 'Im mana'),
-(2, 3, 'mana', 'UTM', 'DS', '2029', '', '2025-04-25 11:54:58', ''),
-(3, 4, 'abdelrahman mohamed', 'UiTM', 'CY', '2028', NULL, '2025-04-25 13:13:13', NULL),
-(4, 5, 'abdo nasser', 'UMS', 'CY', '2027', '', '2025-04-26 14:29:41', 'hi im abdo'),
-(5, 7, 'body', 'USM', 'CY', '2030', '', '2025-04-29 14:38:56', 'ana bodddyyyy'),
-(6, 8, 'dr hadad', 'UNIMAS', 'CY', '2029', '', '2025-04-29 15:02:06', ''),
-(7, 9, 'abdo awy awy', 'UMS', 'CY', '2029', '01112233475', '2025-05-21 13:25:36', 'aaaaaaaa');
+INSERT INTO `students` (`id`, `user_id`, `name`, `university`, `major`, `graduation_year`, `phone`, `iban`, `created_at`, `bio`) VALUES
+(1, 1, 'abdelrahman mohamed', 'UNIMAS', 'CY', '2028', '01112233475', NULL, '2025-04-24 04:26:23', 'Im mana'),
+(2, 3, 'mana', 'UTM', 'DS', '2029', '', NULL, '2025-04-25 11:54:58', ''),
+(3, 4, 'abdelrahman mohamed', 'UiTM', 'CY', '2028', NULL, NULL, '2025-04-25 13:13:13', NULL),
+(4, 5, 'abdo nasser', 'UMS', 'CY', '2027', '', NULL, '2025-04-26 14:29:41', 'hi im abdo'),
+(5, 7, 'body', 'USM', 'CY', '2030', '', NULL, '2025-04-29 14:38:56', 'ana bodddyyyy'),
+(6, 8, 'dr hadad', 'UNIMAS', 'CY', '2029', '', NULL, '2025-04-29 15:02:06', ''),
+(7, 9, 'abdo awy awy', 'UMS', 'CY', '2029', '01112233475', NULL, '2025-05-21 13:25:36', 'aaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -286,8 +287,8 @@ CREATE TABLE `tasks` (
 INSERT INTO `tasks` (`id`, `company_id`, `title`, `description`, `difficulty`, `deadline`, `budget`, `estimated_hours`, `max_submissions`, `deliverables`, `template_file_path`, `status`, `created_at`) VALUES
 (1, 1, 'mana', 'asfasdfs', 'beginner', '2025-10-12', 2000.00, 5, 10, 'sadfsdffd', NULL, 'active', '2025-04-24 04:27:23'),
 (2, 1, 'mmmm', '3213', 'intermediate', '2025-12-05', 2000.00, 50, 20, '65416', NULL, 'active', '2025-04-24 04:47:56'),
-(3, 1, 'Design a Mascot for a Fictional Space Agency', 'Create a fun and engaging cartoon mascot for a fictional space agency called “Galaxy Explorers United (GEU).” The mascot should be suitable for branding across social media, merchandise, and educational content for kids aged 8–12. Think colorful, creative, and space-themed — maybe an alien, robot, or space critter!', 'beginner', '2025-05-05', 1500.00, 8, 15, 'A digital illustration of the mascot (JPG or PNG)\r\nA short paragraph describing the mascot’s personality and story\r\nOptional: a version with the GEU logo integrated', NULL, 'active', '2025-04-24 21:19:11'),
-(4, 1, 'Create a Jingle for a Pet Food Brand', 'Write and produce a short (20–30 second) jingle for a fictional pet food brand called “PawPal.” It should be catchy, fun, and memorable, appealing to both pet owners and kids. You can use vocals, instruments, or digital tools.', 'intermediate', '2025-05-05', 500.00, 7, 10, 'An audio file (MP3 or WAV)\r\n\r\nLyrics as a text document\r\n\r\nA short note explaining your musical choices', NULL, 'active', '2025-04-24 22:44:12'),
+(3, 1, 'Design a Mascot for a Fictional Space Agency', 'Create a fun and engaging cartoon mascot for a fictional space agency called "Galaxy Explorers United (GEU)." The mascot should be suitable for branding across social media, merchandise, and educational content for kids aged 8–12. Think colorful, creative, and space-themed — maybe an alien, robot, or space critter!', 'beginner', '2025-05-05', 1500.00, 8, 15, 'A digital illustration of the mascot (JPG or PNG)\r\nA short paragraph describing the mascot's personality and story\r\nOptional: a version with the GEU logo integrated', NULL, 'active', '2025-04-24 21:19:11'),
+(4, 1, 'Create a Jingle for a Pet Food Brand', 'Write and produce a short (20–30 second) jingle for a fictional pet food brand called "PawPal." It should be catchy, fun, and memorable, appealing to both pet owners and kids. You can use vocals, instruments, or digital tools.', 'intermediate', '2025-05-05', 500.00, 7, 10, 'An audio file (MP3 or WAV)\r\n\r\nLyrics as a text document\r\n\r\nA short note explaining your musical choices', NULL, 'active', '2025-04-24 22:44:12'),
 (5, 1, 'agaga', 'asdassad', 'beginner', '2025-05-02', 1000.00, 3, 10, 'asdasadads', NULL, 'active', '2025-04-26 12:58:28'),
 (6, 1, 'task w keda', 'asdasdasd', 'beginner', '2025-12-02', 2000.00, 6, 10, 'asdassad', NULL, 'active', '2025-04-26 14:39:22'),
 (7, 1, 'gaaaggg', 'asdsasad', 'intermediate', '2025-12-05', 2000.00, 4, 6, 'asdasdads', NULL, 'active', '2025-04-26 14:48:07'),
@@ -496,34 +497,4 @@ ALTER TABLE `companies`
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `payments`
---
-ALTER TABLE `payments`
-  ADD CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`certificate_id`) REFERENCES `certificates` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `students`
---
-ALTER TABLE `students`
-  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `submissions`
---
-ALTER TABLE `submissions`
-  ADD CONSTRAINT `submissions_ibfk_1` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `submissions_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `tasks`
---
-ALTER TABLE `tasks`
-  ADD CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `

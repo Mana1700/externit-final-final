@@ -55,7 +55,8 @@ try {
                 major = ?, 
                 graduation_year = ?,
                 phone = ?,
-                bio = ?
+                bio = ?,
+                iban = ?
             WHERE user_id = ?
         ");
         $stmt->execute([
@@ -63,8 +64,9 @@ try {
             $_POST['university'],
             $_POST['major'],
             $_POST['graduation_year'],
-            $_POST['phone'],
-            $_POST['bio'],
+            $_POST['phone'] ?? null,
+            $_POST['bio'] ?? null,
+            $_POST['iban'] ?? null,
             $user_id
         ]);
     } else {

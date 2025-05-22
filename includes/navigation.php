@@ -132,6 +132,9 @@ if ($isLoggedIn) {
                         <li class="nav-item">
                             <a class="nav-link" href="/Externit-final/admin/manage_contacts.php">Contact Messages</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Externit-final/admin_payments.php">Payment Management</a>
+                        </li>
                     <?php endif; ?>
                 <?php else: ?>
                     <li class="nav-item">

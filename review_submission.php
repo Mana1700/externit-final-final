@@ -83,6 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $certificate_number
             ]);
 
+            // Get the certificate ID
+            $certificate_id = $pdo->lastInsertId();
+
             // Create notification for the student
             $stmt = $pdo->prepare("
                 INSERT INTO notifications (
@@ -103,11 +106,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt = $pdo->prepare("
                     INSERT INTO payments (
                         certificate_id, amount, status, payment_date
-                    ) VALUES (
-                        LAST_INSERT_ID(), ?, 'pending', NOW()
-                    )
+                    ) VALUES (?, ?, 'pending', NOW())
                 ");
-                $stmt->execute([$submission['budget']]);
+                $stmt->execute([$certificate_id, $submission['budget']]);
             }
         }
 
