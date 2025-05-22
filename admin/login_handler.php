@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['user_type'] = $user_type;
     $_SESSION['name'] = $user['email'];
-    header("Location: manage_companies.php");
+    header("Location: dashboard.php");
     exit();
 }
 ?> 
