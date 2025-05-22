@@ -14,7 +14,7 @@ session_start();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.php">ExternIT</a>
+            <a class="navbar-brand" href="index.php"><img src="/externit-final/assets/images/Logo.png" alt="ExternIT Logo" style="height: 40px; width: auto;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -134,6 +134,17 @@ session_start();
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
+                            <?php if (isset($_GET['success'])): ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <?php echo htmlspecialchars($_GET['success']); ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php elseif (isset($_GET['error'])): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <?php echo htmlspecialchars($_GET['error']); ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
                             <h3>Contact Support</h3>
                             <form action="send_message.php" method="POST">
                                 <div class="mb-3">
