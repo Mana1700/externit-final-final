@@ -361,46 +361,6 @@ if ($company['approval_status'] === 'approved' && isset($_GET['just_approved']))
                                                     <div class="col-md-6">
                                                         <div class="student-details-card">
                                                             <div class="card-icon">
-                                                                <i class="bi bi-person-lines-fill"></i>
-                                                            </div>
-                                                            <h6 class="section-title">Contact Information</h6>
-                                                            <div class="contact-info">
-                                                                <div class="contact-item">
-                                                                    <div class="contact-icon">
-                                                                        <i class="bi bi-envelope"></i>
-                                                                    </div>
-                                                                    <div class="contact-details">
-                                                                        <span class="label">Email Address</span>
-                                                                        <div class="d-flex align-items-center gap-2">
-                                                                            <span class="value"><?php echo htmlspecialchars($submission['student_email']); ?></span>
-                                                                            <a href="mailto:<?php echo htmlspecialchars($submission['student_email']); ?>" class="btn btn-sm btn-outline-company">
-                                                                                <i class="bi bi-send"></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <?php if ($submission['phone']): ?>
-                                                                <div class="contact-item">
-                                                                    <div class="contact-icon">
-                                                                        <i class="bi bi-telephone"></i>
-                                                                    </div>
-                                                                    <div class="contact-details">
-                                                                        <span class="label">Phone Number</span>
-                                                                        <div class="d-flex align-items-center gap-2">
-                                                                            <span class="value"><?php echo htmlspecialchars($submission['phone']); ?></span>
-                                                                            <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $submission['phone']); ?>" target="_blank" class="btn btn-sm btn-outline-success">
-                                                                                <i class="bi bi-whatsapp"></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <?php endif; ?>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="student-details-card">
-                                                            <div class="card-icon">
                                                                 <i class="bi bi-mortarboard"></i>
                                                             </div>
                                                             <h6 class="section-title">Education</h6>

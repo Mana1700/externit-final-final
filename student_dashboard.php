@@ -295,12 +295,21 @@ $total_submissions = $stmt->fetch()['total'];
                                                 </a>
                                             </div>
                                             <div class="badge-status <?php echo strtolower($submission['status']); ?>">
-                                                <i class="bi <?php echo match($submission['status']) {
-                                                    'approved' => 'bi-check-circle-fill',
-                                                    'rejected' => 'bi-x-circle-fill',
-                                                    'pending' => 'bi-hourglass-split',
-                                                    default => 'bi-clock'
-                                                }; ?>"></i>
+                                                <?php
+                                                    $icon = 'bi-clock';
+                                                    switch ($submission['status']) {
+                                                        case 'approved':
+                                                            $icon = 'bi-check-circle-fill';
+                                                            break;
+                                                        case 'rejected':
+                                                            $icon = 'bi-x-circle-fill';
+                                                            break;
+                                                        case 'pending':
+                                                            $icon = 'bi-hourglass-split';
+                                                            break;
+                                                    }
+                                                ?>
+                                                <i class="bi <?php echo $icon; ?>"></i>
                                                 <?php echo $submission['status_text']; ?>
                                             </div>
                                         </div>
