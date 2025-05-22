@@ -1,0 +1,38 @@
+/* Navigation */
+.navbar {
+    background-color: var(--background-light);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.navbar-brand {
+    color: var(--student-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.navbar-brand:hover {
+    color: var(--student-hover);
+}
+
+.nav-link {
+    color: #666666;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--student-primary);
+}
+
+.nav-link.active {
+    color: var(--student-primary);
+    font-weight: 600;
+} 

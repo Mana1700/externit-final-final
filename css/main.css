@@ -1,0 +1,116 @@
+/* Main CSS File - Imports all modular stylesheets */
+
+/* Variables and Configuration */
+@import url('_variables.css');
+
+/* Base Styles */
+@import url('_base.css');
+@import url('_layout.css');
+
+/* Components */
+@import url('_navigation.css');
+@import url('_buttons.css');
+@import url('_cards.css');
+@import url('_forms.css');
+@import url('_badges.css');
+@import url('_alerts.css');
+@import url('_tables.css');
+@import url('_components.css');
+@import url('_certificates.css');
+@import url('_tasks.css');  /* Student dashboard task styles */
+@import url('_company_dashboard.css');  /* Company dashboard styles */
+
+/* Note: Add _utilities.css and _responsive.css if/when created */
+
+/* Company Dashboard Styles */
+.company-card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(var(--company-primary-rgb), 0.15);
+    padding: 0.75rem 1rem;
+}
+
+.company-card-header h5 {
+    color: var(--company-primary);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.company-meta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius);
+    background-color: rgba(var(--company-primary-rgb), 0.08);
+    border: 1px solid rgba(var(--company-primary-rgb), 0.15);
+    color: var(--company-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+.company-meta-label i {
+    color: var(--company-primary);
+    font-size: 0.95rem;
+    margin-right: -0.1rem;
+}
+
+.company-progress {
+    height: 8px;
+    background-color: var(--gray-200);
+    margin: 1.25rem 0;
+    overflow: hidden;
+}
+
+.company-progress-bar {
+    height: 100%;
+    background: linear-gradient(45deg, var(--company-primary), var(--company-secondary));
+    transition: width 0.3s ease;
+}
+
+/* Company Dashboard Task Card */
+.company-dashboard-task-card {
+    border: 1px solid rgba(var(--company-primary-rgb), 0.15);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.company-dashboard-task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.company-dashboard-task-card .card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(var(--company-primary-rgb), 0.15);
+    padding: 0.75rem 1rem;
+}
+
+.company-dashboard-task-card .card-header h5 {
+    color: var(--company-primary);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.company-dashboard-task-card .card-body {
+    padding: 1.25rem;
+}
+
+.company-dashboard-task-card .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(var(--company-primary-rgb), 0.15);
+} 

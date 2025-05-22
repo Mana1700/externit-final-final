@@ -1,0 +1,15 @@
+/* Student Bio */
+.student-bio {
+    background: rgba(var(--student-primary-rgb), 0.05);
+    border: 1px solid rgba(var(--student-primary-rgb), 0.1);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.student-bio p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+} 

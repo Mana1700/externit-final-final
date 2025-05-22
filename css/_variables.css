@@ -1,0 +1,68 @@
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Theme Colors */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    
+    /* Student Theme Colors */
+    --student-primary: #2A9D8F;
+    --student-secondary: #264653;
+    --student-primary-rgb: 42, 157, 143;
+    --student-light: #EBF5F3;
+    --student-hover: #045a48;
+    --student-gradient: linear-gradient(45deg, var(--student-primary), var(--student-secondary));
+    
+    /* Company Theme Colors */
+    --company-primary: #BF6D3A;
+    --company-secondary: #8B4513;
+    --company-primary-rgb: 191, 109, 58;
+    --company-light: #FDF6F2;
+    --company-hover: #a85d31;
+    --company-gradient: linear-gradient(45deg, var(--company-primary), var(--company-secondary));
+    
+    /* Common Colors */
+    --text-dark: #212529;
+    --text-light: #ffffff;
+    --text-muted: #6C757D;
+    --background-light: #f8f9fa;
+    --border-color: #E9ECEF;
+    --white: #ffffff;
+    
+    /* Status Colors (based on latest guide) */
+    --status-accepted-fg: #2D9CDB;
+    --status-accepted-bg: rgba(45, 156, 219, 0.1);
+    --status-accepted-border: rgba(45, 156, 219, 0.2);
+    
+    --status-pending-fg: #F2994A;
+    --status-pending-bg: rgba(242, 153, 74, 0.1);
+    --status-pending-border: rgba(242, 153, 74, 0.2);
+
+    --status-rejected-fg: #EB5757;
+    --status-rejected-bg: rgba(235, 87, 87, 0.1);
+    --status-rejected-border: rgba(235, 87, 87, 0.2);
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
+    /* Font Variables (Optional) */
+    --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Spacing (Optional) */
+    --spacer: 1rem;
+
+    /* Border Radius (Based on latest guide) */
+    --border-radius-sm: 4px;  /* Progress bars */
+    --border-radius: 6px;     /* Buttons, inputs, badges */
+    --border-radius-lg: 12px;   /* Cards */
+    --border-radius-pill: 50%; /* Images */
+} 

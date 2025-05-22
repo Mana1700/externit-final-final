@@ -1,0 +1,42 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+/* Base Typography (Add more as needed) */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--company-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--company-hover);
+}
+
+/* Company-specific overrides */
+.company-view a {
+    color: var(--company-primary);
+}
+
+.company-view a:hover {
+    color: var(--company-hover);
+} 

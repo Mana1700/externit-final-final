@@ -1,0 +1,241 @@
+/* Cards */
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.card:hover {
+    /* Subtle hover effect (optional, apply specific classes if needed) */
+    /* transform: translateY(-2px); */
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
+}
+
+/* Card Header */
+.card-header {
+    padding: 1rem 1.5rem;
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--border-color);
+    /* Default header is light */
+}
+
+/* Themed Card Header (e.g., Task cards) */
+.card-header-themed {
+    background: var(--student-gradient); /* Default to student */
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; /* Match card radius */
+    padding: 1.25rem 1.5rem;
+}
+
+.card-header-themed.company-theme {
+    background: var(--company-gradient);
+}
+
+.card-header-themed h1,
+.card-header-themed h2,
+.card-header-themed h3,
+.card-header-themed h4,
+.card-header-themed h5,
+.card-header-themed h6 {
+    color: inherit; /* Ensure text color is light */
+}
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem; /* Consistent padding */
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 1rem 1.5rem;
+    background-color: var(--background-light);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Specific Card Types (Apply base styles + overrides) */
+
+/* Example: Task Card (like view_tasks.php) */
+.task-card {
+    /* .card base styles apply */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Guide shadow */
+}
+
+.task-card:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(5, 105, 84, 0.15); /* Guide hover shadow */
+}
+
+.task-card .card-header {
+    /* Override default header with themed version */
+    composes: card-header-themed;
+}
+
+/* Example: Filter Card (like view_tasks.php) */
+.filter-card {
+    /* .card base styles apply */
+     border: none; /* Guide specifies no border */
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Guide shadow */
+}
+
+.filter-card .card-header {
+    /* Override default header with light version */
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-card .card-header h5 {
+     color: var(--student-primary);
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     margin: 0;
+}
+
+/* Add other specific card styles as needed */
+
+/* Task Cards */
+.task-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-card .task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task-card .task-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.task-card .task-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.task-card .task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Student/Company Specific Cards */
+.student-card {
+    border-left: 5px solid var(--student-primary);
+}
+
+.company-card {
+    border-left: 5px solid var(--company-primary);
+}
+
+/* Task Progress Bar */
+.task-progress {
+    background-color: #e9ecef; /* Light grey background */
+    border-radius: 50px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 1rem; /* Add some space above */
+    margin-bottom: 1rem; /* Add some space below */
+}
+
+.task-progress-bar {
+    height: 100%;
+    background-color: var(--primary-color); /* Default color */
+    border-radius: 50px;
+    transition: width 0.4s ease;
+}
+
+/* Theme-specific progress bars */
+.student-task-progress-bar {
+    background-color: var(--student-primary);
+}
+
+.company-task-progress-bar {
+    background-color: var(--company-primary);
+}
+
+/* Dashboard Task Cards */
+.dashboard-task-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.dashboard-task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-task-card .card-header {
+    background: linear-gradient(45deg, var(--student-primary), var(--student-secondary));
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    padding: 1rem 1.25rem;
+    position: relative;
+}
+
+.dashboard-task-card .card-header h5 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.dashboard-task-card .card-body {
+    padding: 1.25rem;
+}
+
+/* Progress Bar */
+.dashboard-progress {
+    height: 8px;
+    background-color: var(--gray-200);
+    margin: 1.25rem 0;
+    overflow: hidden;
+}
+
+.dashboard-progress-bar {
+    height: 100%;
+    background: linear-gradient(45deg, var(--student-primary), var(--student-secondary));
+    transition: width 0.3s ease;
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+} 

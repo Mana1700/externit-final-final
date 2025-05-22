@@ -1,0 +1,97 @@
+/* Forms */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+}
+
+.form-header {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.student-form .form-header {
+    background: var(--student-gradient);
+}
+
+.company-form .form-header {
+    background: var(--company-gradient);
+}
+
+.form-body {
+    padding: 2rem;
+}
+
+.form-control {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.form-control:focus {
+    border-color: var(--student-primary);
+    box-shadow: 0 0 0 0.2rem rgba(5, 105, 84, 0.1);
+}
+
+.company-form .form-control:focus {
+    border-color: var(--company-primary);
+    box-shadow: 0 0 0 0.2rem rgba(191, 109, 58, 0.1);
+}
+
+/* This rule was conflicting and overly specific, using 50px radius. Removing it. */
+/*
+.form-select, .form-control {
+    border-radius: 50px; 
+    padding: 8px 16px;
+}
+*/
+
+/* Added base styling for form-select */
+.form-select {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    background-position: right 1rem center;
+    background-color: var(--white);
+}
+
+.form-select:focus {
+    border-color: var(--student-primary);
+    box-shadow: 0 0 0 0.25rem rgba(5, 105, 84, 0.1);
+}
+
+.company-form .form-select:focus {
+    border-color: var(--company-primary);
+    box-shadow: 0 0 0 0.25rem rgba(191, 109, 58, 0.1);
+}
+
+/* Task label from view_tasks.php */
+.task-label {
+    color: var(--student-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+} 

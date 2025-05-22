@@ -1,0 +1,154 @@
+/* Badges */
+
+/* Base Badge Style (Used by dashboard, task badges) */
+.badge-base {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    border: 1px solid var(--gray-200);
+}
+
+.badge-base i {
+    font-size: 0.9rem;
+}
+
+/* Specific Badge Types (Inherit from .badge-base) */
+.dashboard-badge, /* Default info/difficulty badge */
+.task-badge,
+.task-count {
+    composes: badge-base;
+    color: var(--student-primary);
+    background-color: rgba(5, 105, 84, 0.1); /* Use primary color with alpha */
+    border-color: rgba(5, 105, 84, 0.2);
+}
+
+.dashboard-badge i,
+.task-badge i,
+.task-count i {
+    color: var(--student-primary);
+}
+
+/* Status Badges (Override Bootstrap defaults) */
+/* Note: Overriding Bootstrap might be fragile. Using custom classes is preferred. */
+.badge.bg-success,
+.badge.bg-warning,
+.badge.bg-danger,
+.badge.bg-info {
+    border-radius: var(--border-radius) !important;
+    padding: 0.375rem 0.875rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* New Status-Specific Classes (Using variables) */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-status.pending {
+    background-color: var(--warning-50);
+    color: var(--warning-700);
+    border: 1px solid var(--warning-200);
+}
+
+.badge-status.accepted {
+    background-color: var(--success-50);
+    color: var(--success-700);
+    border: 1px solid var(--success-200);
+}
+
+.badge-status.rejected {
+    background-color: var(--danger-50);
+    color: var(--danger-700);
+    border: 1px solid var(--danger-200);
+}
+
+.badge-status i {
+    font-size: 0.9rem;
+}
+
+/* Outline Badges */
+.badge-outline {
+    composes: badge-base;
+    background-color: transparent;
+    border-width: 1px;
+}
+
+.badge-outline-student {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--student-primary);
+    background-color: transparent;
+    border: 1px solid var(--student-primary);
+}
+
+.badge-outline-student i {
+    font-size: 0.9rem;
+    color: var(--student-primary);
+}
+
+.badge-outline-company {
+    composes: badge-outline;
+    color: var(--company-primary);
+    border-color: var(--company-primary);
+}
+.badge-outline-company i {
+    color: var(--company-primary);
+}
+
+/* Cleaned up original badges */
+/*
+.student-badge {
+    background-color: var(--student-badge-bg, rgba(42, 157, 143, 0.1));
+    color: var(--student-badge-text, #2A9D8F);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.company-badge {
+    background-color: var(--company-badge-bg, rgba(191, 109, 58, 0.1));
+    color: var(--company-badge-text, #BF6D3A);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+*/
+
+.dashboard-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Badge Groups */
+.badge-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+} 

@@ -1,0 +1,170 @@
+/* Buttons & Theme Specific Text/Elements */
+
+/* Student Theme */
+.student-text {
+    color: var(--student-primary);
+}
+
+.student-btn {
+    background-color: var(--student-primary);
+    color: var(--text-light);
+    border: 1px solid var(--student-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.student-btn:hover {
+    background-color: var(--student-hover);
+    border-color: var(--student-hover);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+.btn-outline-student {
+    color: var(--student-primary);
+    border-color: var(--student-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-student:hover {
+    background-color: var(--student-primary);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+/* Company Theme */
+.company-text {
+    color: var(--company-primary);
+}
+
+.company-btn {
+    background-color: var(--company-primary);
+    color: var(--text-light);
+    border: 1px solid var(--company-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.company-btn:hover {
+    background-color: var(--company-hover);
+    border-color: var(--company-hover);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+.btn-outline-company {
+    color: var(--company-primary);
+    border-color: var(--company-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-company:hover {
+    background-color: var(--company-primary);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+/* Filter buttons from view_tasks.php */
+.btn-filter {
+    composes: student-btn;
+    padding: 0.625rem 1.25rem;
+}
+
+.btn-clear {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+    border-radius: var(--border-radius);
+    padding: 0.625rem 1.25rem;
+    transition: all 0.2s;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-clear:hover {
+    background-color: var(--text-muted);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+.btn-view {
+    composes: student-btn;
+    padding: 0.625rem 1.25rem;
+}
+
+/* Upload Button from profile.php */
+.btn-upload {
+    composes: student-btn;
+    padding: 12px 24px;
+}
+
+/* Add specific company styles if needed */
+/* .company-btn-upload { background-color: var(--company-primary); } */
+
+.btn-upload:hover {
+    /* background-color: <?php echo $user_type === 'student' ? '#45a049' : '#a85d31'; ?>; */
+    opacity: 0.9;
+    color: white;
+}
+
+/* Add styles for btn-outline-secondary */
+.btn-outline-secondary {
+    color: var(--text-muted);
+    border-color: var(--text-muted);
+    border-width: 1px;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--text-muted);
+    color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+/* Primary Student Button */
+.btn-primary-student {
+    background: var(--student-primary);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-student:hover {
+    background: var(--student-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    color: var(--white);
+}
+
+.btn-primary-student:active {
+    transform: translateY(0);
+}
+
+.btn-primary-student.btn-sm {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary-student i {
+    font-size: 1rem;
+}
+
+.btn-primary-student.btn-sm i {
+    font-size: 0.9rem;
+} 

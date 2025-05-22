@@ -1,0 +1,179 @@
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Add other general layout styles if needed */
+
+/* Profile Pictures */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dashboard Meta */
+.dashboard-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* Style for individual meta items that aren't labels */
+.dashboard-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dashboard-meta-item i {
+    color: var(--student-primary);
+    font-size: 0.95rem;
+    margin-right: 0.1rem;
+}
+
+.dashboard-meta-item span {
+    color: var(--gray-700);
+    line-height: 1.4;
+}
+
+/* Soft Label Style for Meta Info (e.g., Company, Budget) */
+.meta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius);
+    background-color: rgba(var(--student-primary-rgb), 0.08); /* Softer background */
+    border: 1px solid rgba(var(--student-primary-rgb), 0.15);
+    color: var(--student-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.meta-label i {
+    color: var(--student-primary);
+    font-size: 0.95rem;
+    margin-right: -0.1rem; /* Slightly pull icon closer */
+}
+
+.meta-label span {
+     color: var(--student-primary);
+     font-weight: 500;
+}
+
+.meta-label .company-photo-small {
+    width: 20px; /* Even smaller photo inside label */
+    height: 20px;
+    border: none;
+    vertical-align: middle; /* Align photo nicely */
+}
+
+.meta-label .company-photo-placeholder {
+    width: 20px;
+    height: 20px;
+    font-size: 0.85rem; /* Smaller icon */
+    vertical-align: middle;
+    color: var(--student-primary);
+    background-color: rgba(var(--student-primary-rgb), 0.15);
+    border: none;
+}
+
+/* Company Photos */
+.company-photo-small {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius-pill);
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-light);
+}
+
+.company-photo-placeholder {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--student-primary);
+    background-color: rgba(var(--student-primary-rgb), 0.1);
+    border-radius: var(--border-radius-pill);
+    border: 1px solid rgba(var(--student-primary-rgb), 0.2);
+}
+
+/* Company theme overrides */
+.company-view .company-photo-placeholder {
+    color: var(--company-primary);
+    background-color: rgba(var(--company-primary-rgb), 0.1);
+    border: 1px solid rgba(var(--company-primary-rgb), 0.2);
+}
+
+/* How It Works Section Styling (from index.php) */
+.step {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem; /* Add spacing */
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-pill); /* Circle */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-light); /* White text */
+    /* Background color set by theme class */
+}
+
+.step-number.student-theme {
+    background-color: var(--student-primary);
+}
+
+.step-number.company-theme {
+     background-color: var(--company-primary);
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--text-muted);
+} 

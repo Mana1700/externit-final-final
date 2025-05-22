@@ -1,0 +1,11 @@
+/* Tables */
+.table {
+    /* Assuming Bootstrap provides base table styles */
+    /* Add custom overrides or extensions here if needed */
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 0.8rem 1rem;
+} 
