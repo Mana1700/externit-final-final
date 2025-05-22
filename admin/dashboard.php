@@ -184,7 +184,7 @@ $recent_companies = $stmt->fetchAll();
                 <a href="manage_contacts.php" class="btn btn-admin me-2">
                     <i class="bi bi-envelope"></i> Manage Contacts
                 </a>
-                <a href="admin_payments.php" class="btn btn-admin">
+                <a href="../admin_payments.php" class="btn btn-admin">
                     <i class="bi bi-currency-dollar"></i> Manage Payments
                 </a>
             </div>
