@@ -27,7 +27,7 @@ include 'includes/header.php';
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card h-100 company-card">
+            <div class="card h-100 cony-card">
                 <div class="card-body">
                     <div class="feature-icon mb-3 company-icon">
                         <i class="bi bi-lightbulb fs-1"></i>

@@ -66,7 +66,7 @@ include 'includes/header.php';
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm hover-card animate-fade-in-delay-2">
                         <div class="card-body text-center p-4">
-                            <div class="step-number rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <div class="step-number student-theme rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
                                 <span class="display-6 fw-bold">3</span>
                             </div>
                             <h3 class="h4 mb-3">Get Certified</h3>
