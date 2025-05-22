@@ -125,6 +125,14 @@ if ($isLoggedIn) {
                             <a class="nav-link" href="/externit-final/review_submissions.php">Review Submissions</a>
                         </li>
                     <?php endif; ?>
+                    <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin'): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin/manage_companies.php">Manage Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin/manage_contacts.php">Contact Messages</a>
+                        </li>
+                    <?php endif; ?>
                 <?php else: ?>
                     <li class="nav-item">
                         <a class="nav-link" href="/externit-final/about.php">About</a>
