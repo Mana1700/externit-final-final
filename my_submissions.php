@@ -305,11 +305,18 @@ $companies = $stmt->fetchAll();
                                 </div>
                             </div>
                             <div class="badge-status <?php echo strtolower($submission['normalized_status']); ?>">
-                                <i class="bi <?php echo match(strtolower($submission['normalized_status'])) {
-                                    'approved' => 'bi-check-circle-fill',
-                                    'rejected' => 'bi-x-circle-fill',
-                                    default => 'bi-hourglass-split'
-                                }; ?>"></i>
+                                <?php
+                                    $icon = 'bi-hourglass-split';
+                                    switch (strtolower($submission['normalized_status'])) {
+                                        case 'approved':
+                                            $icon = 'bi-check-circle-fill';
+                                            break;
+                                        case 'rejected':
+                                            $icon = 'bi-x-circle-fill';
+                                            break;
+                                    }
+                                ?>
+                                <i class="bi <?php echo $icon; ?>"></i>
                                 <?php echo htmlspecialchars($submission['status_text']); ?>
                             </div>
                         </div>
