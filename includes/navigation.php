@@ -208,9 +208,9 @@ if ($isLoggedIn) {
                             <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="/externit-final/profile.php">Profile</a></li>
+                            <li><a class="dropdown-item" href="/externit-final/profile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/externit-final/logout.php">Logout</a></li>
+                            <li><a class="dropdown-item" href="/externit-final/logout.php"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                         </ul>
                     </li>
                 <?php else: ?>
