@@ -58,11 +58,11 @@ $submissions = $stmt->fetchAll();
     <?php include '../includes/navigation.php'; ?>
 
     <div class="container mt-4">
+        <a href="dashboard.php" class="btn btn-outline-primary mb-3">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Contact Form Submissions</h2>
-            <a href="/Externit-final/admin/manage_companies.php" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i> Back to Companies
-            </a>
         </div>
         
         <?php if (isset($_GET['success'])): ?>

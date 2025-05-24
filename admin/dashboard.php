@@ -176,7 +176,12 @@ $recent_companies = $stmt->fetchAll();
 
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="text-primary">Admin Dashboard</h2>
+            <div class="d-flex align-items-center">
+                <a href="../index.php" class="btn btn-outline-primary me-3">
+                    <i class="bi bi-arrow-left"></i> Back to Main
+                </a>
+                <h2 class="text-primary mb-0">Admin Dashboard</h2>
+            </div>
             <div class="admin-actions">
                 <a href="manage_companies.php" class="btn btn-admin me-2">
                     <i class="bi bi-building"></i> Manage Companies

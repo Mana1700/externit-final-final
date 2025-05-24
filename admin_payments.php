@@ -90,6 +90,11 @@ $payments = $stmt->fetchAll();
     <?php include 'includes/navigation.php'; ?>
 
     <div class="container mt-4">
+        <div class="d-flex align-items-center mb-3">
+            <a href="admin/dashboard.php" class="btn btn-outline-primary me-3">
+                <i class="bi bi-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
         <?php if (isset($_GET['success'])): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <?php echo htmlspecialchars($_GET['success']); ?>

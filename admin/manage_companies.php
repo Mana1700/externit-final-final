@@ -103,7 +103,12 @@ $companies = $stmt->fetchAll();
     <?php include '../includes/navigation.php'; ?>
 
     <div class="container mt-4">
-        <h2>Manage Companies</h2>
+        <a href="dashboard.php" class="btn btn-outline-primary mb-3">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+        <div class="d-flex align-items-center mb-3">
+            <h2 class="mb-0">Manage Companies</h2>
+        </div>
         
         <?php if (isset($_GET['success'])): ?>
             <div class="alert alert-success"><?php echo htmlspecialchars($_GET['success']); ?></div>
